@@ -1,5 +1,14 @@
 package obiecte_clase;
 
+/**
+ * Keyword STATIC
+ *  - se foloseste pentru: proprietati, metode, clase (nu se foloseste pentru constructori)
+ *  - atunci cand o proprietate/variabila/clasa/metoda este statica se aloca spatiu in memorie la pornirea aplicatiei
+ *  - intr-o metoda statica NU putem apela proprietati(variabile) sau metode care nu sunt statice
+ *  - pentru a apela o proprietate/metoda/clasa statica folosim NUMELE CLASEI . NUMELE PROPRIETATII/METODEI/CLASEI => Dog.bark() , nu folosim instanta clasei, adica rex.bark()
+ *  - elementele statice sunt independente de obiecte, adica acestea depind de clasa, nu de instanta lor
+ */
+
 public class Dog {
     //proprietati
     String rasa;
@@ -40,4 +49,18 @@ public class Dog {
             return false;
         }
     }
+
+    public void apport(){
+        System.out.println("Apport");
+    }
+
+    public void displayInfo(){
+        System.out.println("Rasa: " + this.rasa + ", varsta: " + this.age + ", nume: " + this.nume);
+    }
+
+    public static void bark(){
+        System.out.println("HAM HAM!");
+    }
+
+
 }
